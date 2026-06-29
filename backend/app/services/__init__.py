@@ -1,0 +1,1 @@
+"""Services package — image processing, LLM orchestration, prompts."""

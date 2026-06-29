@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-surface text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased font-sans;
+  background-image:
+    radial-gradient(at 20% 10%, rgba(99, 102, 241, 0.12) 0, transparent 50%),
+    radial-gradient(at 80% 30%, rgba(139, 92, 246, 0.10) 0, transparent 55%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-5 py-2.5
+           font-medium text-white shadow-glow transition hover:bg-primary-700
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200
+           bg-white px-5 py-2.5 font-medium text-slate-700 transition hover:bg-slate-50
+           dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-card
+           dark:border-slate-800 dark:bg-slate-900;
+  }
+  .card-elevated {
+    @apply rounded-2xl bg-surface-elevated shadow-card
+           dark:bg-slate-900/80;
+  }
+  .input-base {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm
+           focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30
+           dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100;
+  }
+}

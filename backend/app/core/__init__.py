@@ -1,0 +1,1 @@
+"""Core utilities — JWT validation, shared deps."""

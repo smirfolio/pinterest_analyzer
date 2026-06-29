@@ -1,0 +1,1 @@
+"""API package — routers live in `app.api.routes`."""
